@@ -64,7 +64,6 @@ app.get('/estado-sesion', (req, res) => {
 
 
 
-
 app.get('/cerrar-sesion', (req, res) =>{
     if (req.session){
         req.session.destroy((err) => {
@@ -77,6 +76,7 @@ app.get('/cerrar-sesion', (req, res) =>{
         res.send('No hay una sesión activa para cerrar');
     }
 });
+
 
 //Iniciar el servidor
 const PORT = 3000;
